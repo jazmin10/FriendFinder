@@ -1,3 +1,9 @@
+/* ASSIGNMENT #13: Friend Finder 
+List of users */
+
+// ================================================================================
+// Holds the data of all existing users (imported in apiRoutes.js)
+// ================================================================================
 var participants = [
 	{
 		name: "Mario",
@@ -14,8 +20,8 @@ var participants = [
 			3,
 			5]
 	}, {
-		name: "Bowser",
-		photo: "https://aff5fa4925746bf9c161-fb36f18ca122a30f6899af8eef8fa39b.ssl.cf5.rackcdn.com/images/Masthead_Bowser.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png",
+		name: "Wario",
+		photo: "http://i.imgur.com/toCTth5.png",
 		scores: [
 			3,
 			2,
@@ -27,7 +33,22 @@ var participants = [
 			2,
 			5,
 			1]
+	}, {
+		name: "Peach",
+		photo: "https://upload.wikimedia.org/wikipedia/en/d/d5/Peach_%28Super_Mario_3D_World%29.png",
+		scores: [
+			1,
+			2,
+			3,
+			4,
+			5,
+			1,
+			2,
+			3,
+			4,
+			5]
 	}
 ];
 
+// Export the participants array
 module.exports = participants;

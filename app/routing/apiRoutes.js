@@ -1,73 +1,57 @@
-var path = require("path");
+/* ASSIGNMENT #13: Friend Finder 
+API Routes */
 
+// ================================================================================
+// Require the list of all existing users, i.e. the participants array
+// ================================================================================
 var allParticipants = require("../data/friends.js");
 
+// ================================================================================
+// We will be exporting the API routing (imported at server.js)
+// ================================================================================
 module.exports = function(app) {
+
+	// GET: This sends the JSON of the users' list
 	app.get("/api/friends", function(friendsReq, friendsRes){
 		friendsRes.json(allParticipants);
 	});
 
+	// POST: Grabs the data of the new user, calculates compatibility, adds new
+	// user to the users' list, and sends the JSON data of the match
 	app.post("/api/friends", function(newReq, newRes){
+
+		// The object that includes the new user's responses
 		var participant = newReq.body;
-		var scoresInt = [];
-
-		for(var i = 0; i < participant.scores.length; i++){
-			var answers = parseInt(participant.scores[i]);
-			// console.log(typeof(answers));
-			scoresInt.push(answers);
-		}
 		
-		var newUser = {
-			name: participant.name,
-			photoLink: participant.photoLink,
-			scores: scoresInt 
-		}
-
-		console.log(newUser);
-		// console.log(participant);
-
-		var difference = 0;
+		var totalDifference = 0;
 		var bestDifference;
 		var chosenFriend;
 
+		// Find the best match for the new user by comparing the difference 
+		// between the new user's scores against those from other users, 
+		// question by question. Add up the differences to calculate the 
+		// totalDifference. The closest match will be the user with the 
+		// least amount of difference.
+		// ---------------------------------------------------------------------------
 		for (var j = 0; j < allParticipants.length; j++){
-			difference = 0;
+			totalDifference = 0;
 
-			for(var k = 0; k < newUser.scores.length; k++){
-				// var currentUser = parseInt(allParticipants[j].scores[k]);
-				// var newUser = parseInt(participant.scores[k]);
-				difference += Math.abs(allParticipants[j].scores[k] - newUser.scores[k]);
-				// difference += Math.abs(currentUser - newUser);
+			for (var k = 0; k < participant.scores.length; k++){
+				totalDifference += Math.abs(allParticipants[j].scores[k] - participant.scores[k]);
 			} 
 
-			console.log(difference);
-
 			if (bestDifference === undefined){
-				bestDifference = difference;
-				console.log("This is the new difference: " + difference);
+				bestDifference = totalDifference;
 			}
 
-			if (difference <= bestDifference){
-				bestDifference = difference;
+			if (totalDifference <= bestDifference){
+				bestDifference = totalDifference;
 				chosenFriend = allParticipants[j];
-				// console.log("This is the pick: " + chosenFriend);
 			}
-			// console.log(chosenFriend);
 		}
+		
+		allParticipants.push(participant);
 
-		console.log("Your chosen friend is: " + chosenFriend.name);
-
-
-		allParticipants.push(newUser);
 		newRes.json(chosenFriend);
-
-
-
-
-
-
-
-
-
 	});
 }
