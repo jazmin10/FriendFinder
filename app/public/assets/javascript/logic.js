@@ -23,7 +23,7 @@ $(document).ready(function(){
 		else {
 			var newApplicant = {
 				name: $("#nameInput").val().trim(),
-				photoLink: $("#photoInput").val().trim(),
+				photo: $("#photoInput").val().trim(),
 				scores: responses
 			};
 
@@ -86,10 +86,5 @@ $(document).ready(function(){
 		for(var i = 1; i < 11; i++){
 			var answers = $("#question" + i).val("");
 		}
-	}
-
-	// If there is an image error, then display default image
-	function standby() {
-    	document.getElementById('matchImage').src = 'https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png';
 	}
 });
