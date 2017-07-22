@@ -11,6 +11,9 @@ var app = express();
 // Setting our port
 var PORT = process.env.PORT || 3000;
 
+// For my static files
+app.use(express.static("app/public"));
+
 // bodyParser makes it possible for our server to interpret data sent to it.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
