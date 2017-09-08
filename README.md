@@ -14,7 +14,7 @@ For this project I built a full-stack site that takes in results from the users'
 5. Display results as a modal pop-up
   
 ### Previews 
-  #### Survey 
+  #### Survey/Results
   ![survey-view-sample](https://media.giphy.com/media/eYXWdG91zHHqg/giphy.gif)
 
   #### JSON of all possible friends 
