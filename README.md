@@ -13,4 +13,6 @@ For this project I built a full-stack site that takes in results from the users'
    * a route that will handle incoming survey results and compatibility logic
 5. Display results as a modal pop-up
   
-### Sample
+### Example
+
+![view-sample](https://media.giphy.com/media/eYXWdG91zHHqg/giphy.gif)
