@@ -15,7 +15,7 @@ For this project I built a full-stack site that takes in results from the users'
   
 ### Example 
   #### Survey View
-    ![survey-view-sample](https://media.giphy.com/media/eYXWdG91zHHqg/giphy.gif)
+  ![survey-view-sample](https://media.giphy.com/media/eYXWdG91zHHqg/giphy.gif)
 
   #### JSON of all possible friends View
-    ![json-view-sample](https://media.giphy.com/media/W0Dvz8gAcyRVK/giphy.gif)
+  ![json-view-sample](https://media.giphy.com/media/W0Dvz8gAcyRVK/giphy.gif)
