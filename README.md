@@ -18,4 +18,4 @@ For this project I built a full-stack site that takes in results from the users'
   ![survey-view-sample](https://media.giphy.com/media/eYXWdG91zHHqg/giphy.gif)
 
   #### JSON of all possible friends 
-  ![json-view-sample](https://media.giphy.com/media/W0Dvz8gAcyRVK/giphy.gif)
+  ![json-view-sample](app/public/assets/images/json.png)
