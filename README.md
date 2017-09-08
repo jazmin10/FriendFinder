@@ -8,8 +8,9 @@ For this project I built a full-stack site that takes in results from the users'
 1. Provide 10 questions for the survey
 2. Use the following npm packages: express, body-parser, and path
 3. A file that includes routes to display html pages
-4. A file that should include two routes:
+4. A file that should include the following two routes:
    * one that will display a JSON of all possible friends
    * a route that will handle incoming survey results and compatibility logic
+5. Display results as a modal pop-up
   
 ### Sample
