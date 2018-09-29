@@ -1,4 +1,4 @@
-/* ASSIGNMENT #13: Friend Finder 
+/* Friend Finder 
 Starting our server */
 
 // npm packages required

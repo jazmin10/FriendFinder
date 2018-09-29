@@ -1,4 +1,4 @@
-/* ASSIGNMENT #13: Friend Finder 
+/* Friend Finder 
 HTML Routes */
 
 // Require path package to get the correct file path to our html
